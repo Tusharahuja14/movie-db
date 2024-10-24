@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar{
+    width:7px;
+    height:7px;
+}
+::-webkit-scrollbar-thumb{
+background: #18181b;
+bottom:10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #6556cd;
+    border-radius: 10px;
+}
+.select {
+    position: relative;
+    display: inline-block;
+}
+.select::-ms-expand{
+display: none;
+}
+.select select {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 5px 30px 5px 10px;
+    color: white;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMTggMTgiIHdpZHRoPSIxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNSA2bDUgNUwxNSA2IiBzdHJva2U9IiM2NTU2Y2QiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+.select select:focus {
+    border-color: #999;
+}
+
+.select::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #6556cd;
+    transform: translateY(-50%);
+}
